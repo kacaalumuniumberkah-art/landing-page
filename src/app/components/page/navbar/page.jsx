@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
 
@@ -36,7 +36,7 @@ export default function Navbar() {
 
                     <div className="flex items-center gap-3">
                         <a
-                            href="#contact"
+                            href="/login"
                             className="hidden md:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-lg shadow-sm transition-colors"
                         >
                             <i className="fa-solid fa-right-to-bracket text-xs"></i> Login
@@ -73,13 +73,12 @@ export default function Navbar() {
                             </li>
                         ))}
                         <li>
-                            <a
-                                href="#contact"
-                                onClick={closeMenu}
+                            <button
+                                onClick={() => window.location.href('../../../login')}
                                 className="block px-3 py-2 rounded-lg bg-blue-600 text-white font-semibold mt-1 text-center"
                             >
                                 Login
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </div>
